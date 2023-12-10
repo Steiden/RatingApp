@@ -1,0 +1,7 @@
+.btn-report {
+	width: clamp(100px, 100vw / 2, 500px);
+
+	&:hover {
+		background-color: rgba(0, 89, 255, 0.2);
+	}
+}

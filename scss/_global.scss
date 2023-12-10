@@ -1,0 +1,22 @@
+@import "mixins";
+
+body {
+	background: url("../img/main-bg.jpg") no-repeat center center / cover;
+
+	font-family: 'Anonymous Pro', monospace;
+	font-size: clamp(14px, 100vw / 40, 24px);
+}
+
+.main {
+	@include flex-center(flex-center);
+	height: 100dvh;
+	padding: 20px;
+}
+
+.star-icon {
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}

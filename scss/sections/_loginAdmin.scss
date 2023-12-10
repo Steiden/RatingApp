@@ -1,0 +1,24 @@
+.container__form {
+	@include flex-center(column);
+	gap: 20px;
+
+	width: 100%;
+}
+
+.container__input {
+	border: 1px solid #000;
+	border-radius: 5px;
+	font-size: .9em;
+	padding: 10px;
+	width: clamp(200px, 100vw / 2, 500px);
+}
+
+.btn-login {
+	width: 100%;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: rgba(153, 255, 0, 0.3);
+	}
+}

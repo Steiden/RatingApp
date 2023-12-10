@@ -1,0 +1,44 @@
+.container {
+	@include flex-center(column);
+	gap: 25px;
+	padding: 50px;
+
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 10px;
+	box-shadow: 2px 2px 10px #fff, inset 2px 2px 10px #000000a8;
+}
+
+.container__title {
+	font-size: 1.6em;
+	margin-bottom: 25px;
+}
+
+.container__button {
+	border: 1px solid #000;
+	border-radius: 5px;
+	// font-size: 1.1em;
+	padding: 15px 10px;
+	text-align: center;
+	width: 90%;
+
+	background-color: rgba(255, 255, 255, 0.20);
+	backdrop-filter: blur(2px);
+
+	transition: background .3s linear;
+}
+
+.btn-feedback {
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: rgba(0, 128, 0, 0.2);
+	}
+}
+
+.btn-admin {
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: rgba(255, 255, 0, 0.2);
+	}
+}
