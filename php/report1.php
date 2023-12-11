@@ -2,7 +2,7 @@
 
 require_once "./db.php";
 
-$report1 = $dbh->query("select * from usersRates");
+$report1 = $dbh->query("select rating, name, createdAt from usersRates order by rating desc");
 $report1 = $report1->fetchAll();
 
 ?>
