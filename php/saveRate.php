@@ -2,14 +2,14 @@
 
 require_once "./db.php";
 
-$rating = @$_POST['rating'];
-$name = @$_POST['name'];
-$email = @$_POST['email'];
-$text = @$_POST['text'];
+$name = $_POST['name'];
+$rating = $_POST['rating'];
+$email = $_POST['email'];
+$message = $_POST['message'];
 
-if(isset($rating) && isset($name) && isset($email) && isset($text)) {
+if(isset($name) && isset($rating) && isset($email) && isset($message)) {
 	try {
-		$dbh -> prepare("INSERT INTO `users-rate` (`rating`, `name`, `email`, `text`) VALUES (?, ?, ?, ?)")->execute([$rating, $name, $email, $text]);
+		$dbh -> prepare("INSERT INTO `usersRates` (`name`, `rating`, `email`, `message`) VALUES (?, ?, ?, ?)")->execute([$name, $rating, $email, $message]);
 
 		header("Location: ../../../index.html");
 	} catch (Exception $e) {
