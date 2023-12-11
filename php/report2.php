@@ -18,9 +18,29 @@ $report2 = $report2->fetchAll();
 </head>
 
 <body>
-<main class="main">
+	<main class="main">
 		<section class="container">
 			<h1 class="container__title">Отчет 2</h1>
+			<section class="report__command-panel">
+				<form action="./report2Filter.php" method="post" class="report__form report-form">
+					<section class="main__input-container report__input-container">
+						<label for="constraintSymbol" class="report__label">Выбор сравнения:</label>
+						<select name="constraintSymbol" id="constraintSymbol" class="report__select">
+							<option value="=">=</option>
+							<option value=">">></option>
+							<option value="<"><</option>
+						</select>
+					</section>
+					<section class="main__input-container report__input-container">
+						<label for="constraint" class="report__label">Значение:</label>
+						<input type="number" name="constraint" id="constraint" class="report__input" min="1" max="5">
+					</section>
+					<button type="submit" class="container__button report__button">Показать</button>
+				</form>
+				<form action="./report2.php" method="POST">
+					<button type="submit" class="container__button report__button">Все</button>
+				</form>
+			</section>
 			<section class="report">
 				<table class="report__table report-table">
 					<thead class="report-table__head">

@@ -1,4 +1,6 @@
 .report {
+	@include flex-direction(column);
+	
 	border: 1px solid #000;
 	border-radius: 5px;
 
@@ -29,4 +31,44 @@
 }
 
 .report-table__row {
+}
+
+.report__command-panel {
+	@include flex-direction(row);
+	align-items: end;
+	gap: 50px;
+}
+
+.report__form {
+	align-self: start;
+}
+
+.report-form {
+	@include flex-direction(row);
+	align-items: end;
+	gap: 50px;
+	
+	width: 100%;
+}
+
+.report__input-container {
+	width: max-content;
+}
+
+.report__select,
+.report__input {
+	border: 1px solid #000;
+	border-radius: 3px;
+	font-size: .9em;
+	padding: 4px 8px;
+}
+
+.report__select {
+	padding-right: 50px;
+}
+
+.report__button {
+	font-size: .9em;
+	height: fit-content;
+	width: fit-content;
 }

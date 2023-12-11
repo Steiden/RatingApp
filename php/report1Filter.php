@@ -2,8 +2,14 @@
 
 require_once "./db.php";
 
-$report1 = $dbh->query("select rating, name, createdAt from usersRates order by rating desc");
-$report1 = $report1->fetchAll();
+if ($_POST['constraint'] != "" && $_POST['constraintSymbol'] != "") {
+	$constraint = $_POST['constraint'];
+	$constraintSymbol = $_POST['constraintSymbol'];
+	$report1 = $dbh->query("select rating, name, createdAt from usersRates where rating $constraintSymbol $constraint order by rating desc");
+	$report1 = $report1->fetchAll();
+} else {
+	header("Location: report1.php");
+}
 
 ?>
 
@@ -38,7 +44,7 @@ $report1 = $report1->fetchAll();
 					<button type="submit" class="container__button report__button">Показать</button>
 				</form>
 				<form action="./report1.php" method="POST">
-					<button type="submit" class="container__button report__button">Все</button>
+					<button type="submit" name="all" value="all" class="container__button report__button">Все</button>
 				</form>
 			</section>
 			<section class="report">

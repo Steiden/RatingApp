@@ -45,22 +45,7 @@
 	@include flex-center(row);
 }
 
-.main__star-container {
-}
-
-.main__radio {
-	display: none;
-}
-
 .star-icon {
-}
-
-.main__user-data {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	width: 100%;
-	justify-content: space-between;
 }
 
 .user-data__basic {
@@ -70,45 +55,20 @@
 	justify-content: space-between;
 }
 
-.main__input-container {
-	@include flex-center(column);
-	align-items: flex-start;
-	gap: 5px;
-
-	width: 100%;
-}
-
 .user-data__input {
 	width: max-content;
-}
-
-.main__input {
-	padding: 4px 8px;
-}
-
-.main__textarea {
-	padding: 10px;
-	min-height: 60px;
-	max-height: 200px;
-	min-width: 100%;
-	resize: vertical;
-}
-
-.main__input,
-.main__textarea {
-	border: 1px solid #000;
-}
-
-.main__button {
-	background-color: rgb(255, 255, 255);
-	border: 1px solid #000;
-	font-size: 0.9em;
-	padding: 7px 10px;
-	transition: background .2s linear;
 }
 
 .btn-feedback {
 	&:hover {
 		background-color: rgba(255, 176, 5, 0.2);
+	}
+}
+
+.star-icon {
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.7;
 	}
 }

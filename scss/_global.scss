@@ -55,10 +55,48 @@ select {
 	padding: 20px;
 }
 
-.star-icon {
-	cursor: pointer;
+.main__input-container {
+	@include flex-center(column);
+	align-items: flex-start;
+	gap: 5px;
 
-	&:hover {
-		opacity: 0.7;
-	}
+	width: 100%;
+}
+
+.main__input {
+	padding: 4px 8px;
+}
+
+.main__textarea {
+	padding: 10px;
+	min-height: 60px;
+	max-height: 200px;
+	min-width: 100%;
+	resize: vertical;
+}
+
+.main__input,
+.main__textarea {
+	border: 1px solid #000;
+}
+
+.main__button {
+	background-color: rgb(255, 255, 255);
+	border: 1px solid #000;
+	font-size: 0.9em;
+	padding: 7px 10px;
+	transition: background .2s linear;
+}
+
+.main__star-container {
+}
+.main__radio {
+	display: none;
+}
+.main__user-data {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 100%;
+	justify-content: space-between;
 }
