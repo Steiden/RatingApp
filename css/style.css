@@ -34,8 +34,12 @@ a:focus {
 
 body {
   background: url("../img/main-bg.jpg") no-repeat center center/cover;
-  font-family: "Anonymous Pro", monospace;
+  font-family: "Anonymous Pro", monospace !important;
   font-size: clamp(14px, 2.5vw, 24px);
+}
+
+button {
+  font-family: "Anonymous Pro", monospace;
 }
 
 .main {
@@ -78,7 +82,8 @@ body {
   text-align: center;
   width: 90%;
   background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   transition: background 0.3s linear;
 }
 
@@ -149,9 +154,11 @@ body {
 
 .top-side__link {
   background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   border: 1px solid #000;
   font-size: 0.9em;
+  height: -moz-min-content;
   height: min-content;
   padding: 10px;
 }
@@ -204,6 +211,7 @@ body {
 }
 
 .user-data__input {
+  width: -moz-max-content;
   width: max-content;
 }
 

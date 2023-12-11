@@ -3,8 +3,12 @@
 body {
 	background: url("../img/main-bg.jpg") no-repeat center center / cover;
 
-	font-family: 'Anonymous Pro', monospace;
+	font-family: 'Anonymous Pro', monospace !important;
 	font-size: clamp(14px, 100vw / 40, 24px);
+}
+
+button {
+	font-family: 'Anonymous Pro', monospace;
 }
 
 .main {

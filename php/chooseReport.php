@@ -34,8 +34,12 @@ $result = $result->fetch();
 		<?php if($result) : ?>
 			<section class="container">
 				<h1 class="container__title">Администратор</h1>
-				<a href="" class="container__button btn-report">Отчет 1</a>
-				<a href="" class="container__button btn-report">Отчет 2</a>
+				<form action="../php/report1.php" method="post">
+					<button type="submit" class="container__button btn-report">Отчет 1</button>
+				</form>
+				<form action="../php/report2.php" method="post">
+					<button type="submit" class="container__button btn-report">Отчет 2</button>
+				</form>
 			</section>
 		<?php endif; ?>
 	</main>
