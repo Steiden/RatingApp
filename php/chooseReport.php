@@ -42,6 +42,11 @@ $result = $result->fetch();
 				</form>
 			</section>
 		<?php endif; ?>
+
+		<article class="main__nav-buttons">
+			<a href="../index.html" class="main__nav-button">⌂</a>
+			<a href="../html/login-admin.html" class="main__nav-button">←</a>
+		</article>
 	</main>
 </body>
 </html>

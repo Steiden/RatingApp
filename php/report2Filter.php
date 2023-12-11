@@ -66,6 +66,15 @@ if ($_POST['constraint'] != "" && $_POST['constraintSymbol'] != "") {
 				</table>
 			</section>
 		</section>
+
+		<article class="main__nav-buttons">
+			<a href="../index.html" class="main__nav-button">⌂</a>
+			<form action="./chooseReport.php" method="POST" class="main__nav-button">
+				<input type="text" name="login" value="admin" class="d-none">
+				<input type="password" name="password" value="admin" class="d-none">
+				<button type="submit" class="main__nav-button">←</button>
+			</form>
+		</article>
 	</main>
 </body>
 
