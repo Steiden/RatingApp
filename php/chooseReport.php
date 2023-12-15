@@ -5,8 +5,13 @@ require_once "./db.php";
 $login = $_POST['login'];
 $pass = $_POST['password'];
 
-$result = $dbh->query("select * from users where login = '$login' and password = '$pass'");
+$result = $dbh->query("select * from users where login = '$login' and password = '$pass' and roles_id = 1");
 $result = $result->fetch();
+
+if($result === false) {
+	header("Location: ../html/login-admin.html");
+	exit();
+}
 
 ?>
 

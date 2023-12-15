@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Авторизация</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<main class="main">
+		<section class="container admin-container">
+			<form action="../php/user-rate.php" method="POST" class="container__form">
+				<h1 class="container__title">Пользователь</h1>
+				<input type="text" name="login" id="login" class="container__input" placeholder="Введите логин:" minlength="4" maxlength="25" required>
+				<input type="password" name="password" id="password" class="container__input" placeholder="Введите пароль:" minlength="4" maxlength="64" required>
+				<button type="submit" class="container__button btn-login">Вход</button>
+			</form>
+		</section>
+
+		<article class="main__nav-buttons">
+			<a href="../index.html" class="main__nav-button">⌂</a>
+		</article>
+	</main>
+	
+	<script src="../js/script.js"></script>
+</body>
+</html>
